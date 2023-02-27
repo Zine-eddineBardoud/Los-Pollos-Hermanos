@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+*::selection{
+    background: #99313d;
+    color: white;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Start Header */
+.header{
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.links{
+    display: flex;
+    list-style: none;
+}
+.left ul li a, .right ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 40px;
+}
+.logo img:hover{
+    transition: 1.5s;
+    transform: rotate(1turn);
+}
+
+/* Start Links Animation */
+.links li a{
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    color: #ecf0f1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.links li a::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fddb00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+.links li a:hover{
+    color: #d0102e;
+}
+.links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/* End Links Animation */
+
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 85vh;
+}
+.left-quote{
+    width: 48%;
+}
+.left-quote h1{
+    font-family: 'Cookie', cursive;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 200;
+}
+.right-image{
+    width: 48%;
+    text-align: center;
+}
+.right-image img{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+.welcome{
+    margin-bottom: 20px;
+}
+.btn-book-table{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    text-decoration: none;
+    color: white;
+    background-color: #99313d;
+    padding: 10px 20px;
+}
+.btn-book-table i{
+    margin-left: 15px;
+    transition: .5s;
+    animation-name: arrow;
+    animation: arrow 700ms ease-in-out infinite alternate;
+}
+/* .btn-book-table:hover i{
+    transform: translateX(10px);
+} */
+@keyframes arrow {
+    0% {
+        transform: translateX(10px);
+        /* -webkit-transform: translateX(10px); */
+    }
+    100% {
+        transform: translateX(-6px);
+        /* -webkit-transform: translateX(-6px); */
+    }
+}
+/* End Header */
+
+
+/* Start Services Section */
+
+.services-section{
+    background-color: #9bb0ca20;
+}
+.services-head{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.services{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.cards{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.cards .card{
+    position: relative;
+    max-width: 300px;
+    height: 320px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+    border-radius: 8px;
+}
+.cards .card:hover{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+.cards .card .img-box{
+    position: relative;
+    width: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+}
+.cards .card .img-box img{
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+.cards .card:hover img{
+    transform: scale(1.05);
+}
+.cards .card .card-content{
+    position: relative;
+    margin-top: -40px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    transition: .3s ease-in-out;
+}
+
+/* End Services Section */
+
+
+
+/* Start About Section */
+
+.about-section{
+    background-color: #9bb0ca20;
+    padding-bottom: 30px;
+}
+.about-head{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.about{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.right-text{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 80px;
+}
+
+/* End About Section */
+/* Start Contact Section */
+
+.contact-section{
+    width: 80%;
+    margin: 0 auto;
+}
+.contact-head{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+}
+.contact a{
+    padding: 20px 80px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border: 3px solid #99313d;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: .3s;
+}
+.contact a:hover{
+    background-color: #99313d;
+    color: white;
+}
+.contact a i{
+    margin-right: 15px;
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+
+.footer-section{
+    background-color: #9bb0ca20;
+    padding: 20px;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.social-media a i{
+    font-size: 30px;
+    margin: 10px;
+    color: black;
+    transition: .3s;
+}
+.social-media .linkedin:hover i{
+    color: #0E76A8;
+    transform: scale(1.2);
+}
+.social-media .github:hover i{
+    color: #171515;
+    transform: scale(1.2);
+}
+.social-media .twitter:hover i{
+    color: #00ACEE;
+    transform: scale(1.2);
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.footer-links li {
+    margin: 10px;
+}
+.footer-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 2px solid #99313d;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: .3s;
+}
+.footer-links li a:hover{
+    background-color: #99313d;
+    color: white;
+}
+.edit span{
+    font-family: 'Freehand', cursive;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* End Footer Section */
+
+@media (max-width: 1300px) {
+    .left ul li a, .right ul li a {
+        font-size: 13px;
+    }
+}
